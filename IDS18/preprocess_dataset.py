@@ -76,7 +76,7 @@ def main():
 
     df.drop(['Bwd PSH Flags'], axis=1, inplace=True)
     df.drop(['Bwd URG Flags'], axis=1, inplace=True)
-    df.drop(['Fwd Byts  /b Avg'], axis=1, inplace=True)
+    df.drop(['Fwd Byts/b Avg'], axis=1, inplace=True)
     df.drop(['Fwd Pkts/b Avg'], axis=1, inplace=True)
     df.drop(['Fwd Blk Rate Avg'], axis=1, inplace=True)
     df.drop(['Bwd Byts/b Avg'], axis=1, inplace=True)
