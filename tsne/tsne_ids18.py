@@ -4,7 +4,7 @@ import argparse
 from datetime import datetime
 import os 
 from typing import Callable, Dict, Iterable
-import sys; #sys.path.append('/home/cs19resch11001/FIt-SNE')
+import sys;
 import numpy as np
 import pandas as pd
 import torch
@@ -17,7 +17,7 @@ from torch.nn import CrossEntropyLoss
 from torch.optim import Adam
 from torch.utils.data import Dataset, Subset
 from torchvision import transforms
-#from fast_tsne import fast_tsne
+
 
 
 warnings.filterwarnings("ignore")
@@ -169,7 +169,7 @@ for train_index, test_index in sss.split(whole_x, whole_y):
 
 tsne = TSNE(n_components=2, random_state=0,verbose=1,perplexity=50,init='pca')
 X_2d = tsne.fit_transform(X_t)
-#X_2d  = fast_tsne(X_t, initialization='random', seed=1, perplexity=50)
+
 target_ids = [0,1]
 y_t=y_t.astype('int')
 
