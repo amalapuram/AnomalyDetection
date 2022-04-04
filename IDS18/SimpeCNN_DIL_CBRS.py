@@ -100,7 +100,7 @@ for i in range(y_test.shape[0]):
   # y_test[i] = name_to_id[y_test[i]]
 
   # For 2-Class setting use the below 4 lines
-  if y_test[i] in ['15','16','17','18','19']:
+  if y_test[i] in [15,16,17,18,19]:
       y_test[i] = 0
   else:
       y_test[i] = 1
