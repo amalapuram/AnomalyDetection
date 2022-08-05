@@ -112,14 +112,14 @@ def main():
     print("Total number of rows after removing multilabel rows",df.shape[0])
     print("After removing multi_label duplicates",Counter(y['Label']))
     df=pd.concat([df,y],axis=1)    
-    for label in unique_label:
-        sub_dataset=df[df['Label']==label]
-        np.save("data/"+str(label)+".npy",sub_dataset)
+#     for label in unique_label:
+#         sub_dataset=df[df['Label']==label]
+#         np.save("data/"+str(label)+".npy",sub_dataset)
 
     
     #df.to_csv("./data/ids18.csv")
-    #with open('./data/ids_18.pth','wb') as f:
-     #   pickle.dump(df,f) 
+    with open('./data/ids_18.pth','wb') as f:
+        pickle.dump(df,f) 
     
 if __name__ == "__main__":
     main()
